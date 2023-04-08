@@ -1,0 +1,88 @@
+body {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(90, 183, 152);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+.new-string textarea[type=text] {
+  font-size: 30px;
+}
+
+.new-string textarea [type=text], select {
+  width: 100%;
+  height: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.btnstring {
+  background-color: #01b570;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px auto;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btnstring:hover {
+  background-color: #0097af;
+  color: rgb(0, 0, 0);
+}
+
+.magichappens {
+  width: 40%;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 100px;
+}
+
+.magichappens button {
+  background-color: #01b570;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px auto;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.magichappens button:hover {
+  background-color: #0097af;
+  color: rgb(0, 0, 0);
+}
