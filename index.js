@@ -1,16 +1,27 @@
 function newString() {
   let str= document.querySelector('textarea[name="string"]').value;
   let strsec="";
-  let control=0;
+  let controlb=0;
+  let controli=0;
   for (let i=0; i<str.length; i++){
-    if (str[i]==="*"){
-      if (control===0){
+    if (str[i]==="*"){ /*vamos meter isto só num if!*/
+      if (controlb===0){
         strsec+="<b>";
-        control=1;
+        controlb=1;
       }
       else {
         strsec+="</b>";
-        control=0;
+        controlb=0;
+      }
+    }
+    else if (str[i]==="_"){
+      if (controli===0){
+        strsec+="<i>";
+        controli=1;
+      }
+      else {
+        strsec+="</i>";
+        controli=0;
       }
     }
     else {
