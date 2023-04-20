@@ -1,31 +1,42 @@
+class dicionario_simbolos {
+  constructor(simb, init, fim){
+    this.simb = simb;
+    this.init = init;
+    this.fim = fim;
+    this.control = false;
+  }
+}
+
+const asterisco = new dicionario_simbolos("*", "<b>", "</b>");
+const underscore = new dicionario_simbolos("_", "<i>", "</i>");
+
+const lista_simbolos = [asterisco, underscore];
+
 function newString() {
   let str= document.querySelector('textarea[name="string"]').value;
   let strsec="";
-  let controlb=0;
-  let controli=0;
+  let replace = false;
   for (let i=0; i<str.length; i++){
-    if (str[i]==="*"){ /*vamos meter isto só num if!*/
-      if (controlb===0){
-        strsec+="<b>";
-        controlb=1;
-      }
-      else {
-        strsec+="</b>";
-        controlb=0;
-      }
-    }
-    else if (str[i]==="_"){
-      if (controli===0){
-        strsec+="<i>";
-        controli=1;
-      }
-      else {
-        strsec+="</i>";
-        controli=0;
+    for (const simbolo of lista_simbolos) {
+      if (str[i]===simbolo.simb){ 
+        if (simbolo.control === false){
+          strsec+=simbolo.init;
+          simbolo.control = true;
+          replace = true;
+          break;
+        }
+        else {
+          strsec+=simbolo.fim;
+          simbolo.control = false;
+          replace = true;
+          break;
+        }
+      } else {
+        replace = false;
       }
     }
-    else {
-      strsec+=str[i];
+    if(!replace) {
+      strsec += str[i];
     }
   }
   let html="";
